@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endpoint Market™ - Monetize Your API. Discover APIs That Just Work.</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.1"><circle cx="30" cy="30" r="4"/></g></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">Endpoint Market™</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#how-it-works" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">How It Works</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
+                        <a href="#features" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                        <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">Sign Up</button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-gray-900">
+                        <i data-feather="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-white relative">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="mb-8 inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2" data-aos="fade-up">
+                <span class="relative flex h-3 w-3 mr-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span class="text-sm font-medium">$2.3M+ paid to API creators this month</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
+                Turn Your API Into Recurring Revenue.<br>
+                Discover Premium APIs That Just Work.
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Join 5,000+ developers who monetized their APIs in minutes. 
+                From indie hackers earning $5K/month to enterprise APIs generating $500K+—your code could be next. 
+                Stripe-powered, usage-based billing—ship today, get paid forever.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <button class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 shadow-lg">
+                    List Your API Free →
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all transform hover:scale-105">
+                    Browse 1,200+ APIs
+                </button>
+            </div>
+            <div class="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="600">
+                <div>
+                    <div class="text-3xl font-bold text-purple-900 drop-shadow-lg">$12.7M</div>
+                    <div class="text-sm text-purple-900/95 font-medium drop-shadow">Total creator earnings</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-purple-900 drop-shadow-lg">1,200+</div>
+                    <div class="text-sm text-purple-900/95 font-medium drop-shadow">Premium APIs</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-purple-900 drop-shadow-lg">48hrs</div>
+                    <div class="text-sm text-purple-900/95 font-medium drop-shadow">Average time to first $</div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z" fill="#F9FAFB"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">From Code to Cash in 4 Steps</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    While competitors take weeks, our creators monetize in hours. 
+                    See why 89% of listed APIs generate revenue within 7 days.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-purple-100 to-purple-200 w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl">
+                        <i data-feather="upload" class="w-12 h-12 text-purple-600"></i>
+                    </div>
+                    <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-4 text-sm font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-3">Publish in 15 Minutes</h3>
+                    <p class="text-gray-600">Upload your OpenAPI spec, set your own pricing (per-request, per-1k, or flat tiers), and monetize instantly. Keep full control over your pricing strategy. No code changes needed.</p>
+                    <div class="mt-4 text-sm text-purple-600 font-medium">✓ Live in 15 min ✓ Full pricing control ✓ No migration needed</div>
+                </div>
+                <div class="text-center group hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-green-100 to-green-200 w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl">
+                        <i data-feather="credit-card" class="w-12 h-12 text-green-600"></i>
+                    </div>
+                    <div class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-4 text-sm font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-3">Stripe Connect Payouts</h3>
+                    <p class="text-gray-600">Revenue flows directly to your Stripe—no invoicing, no 30-day holds. Get daily payouts as usage happens. Platform fee automatically deducted.</p>
+                    <div class="mt-4 text-sm text-green-600 font-medium">✓ Daily payouts ✓ 135 currencies</div>
+                </div>
+                <div class="text-center group hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-200 w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl">
+                        <i data-feather="key" class="w-12 h-12 text-blue-600"></i>
+                    </div>
+                    <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-4 text-sm font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-3">Developers Consume Instantly</h3>
+                    <p class="text-gray-600">Buyers get one API key for all purchases, unified billing dashboard, and instant access. No separate accounts, no complex integrations.</p>
+                    <div class="mt-4 text-sm text-blue-600 font-medium">✓ 2-click purchase ✓ Single dashboard</div>
+                </div>
+                <div class="text-center group hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-orange-100 to-orange-200 w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl">
+                        <i data-feather="trending-up" class="w-12 h-12 text-orange-600"></i>
+                    </div>
+                    <div class="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-4 text-sm font-bold">4</div>
+                    <h3 class="text-xl font-semibold mb-3">Scale to $100K+/mo</h3>
+                    <p class="text-gray-600">Auto-scaling gateway handles millions of requests. Real-time usage tracking, transparent revenue splits, and growth analytics to optimize pricing.</p>
+                    <div class="mt-4 text-sm text-orange-600 font-medium">✓ 99.9% uptime SLA ✓ Auto-scaling</div>
+                </div>
+            </div>
+            <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-purple-600 mb-2">$0 to $5,000</div>
+                        <div class="text-sm text-gray-600">Average first month revenue</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-green-600 mb-2">15 minutes</div>
+                        <div class="text-sm text-gray-600">Time to go live</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-blue-600 mb-2">7 days</div>
+                        <div class="text-sm text-gray-600">Average time to first payout</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Why 5,000+ Creators Choose Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    While others take 6+ months to build monetization, our creators are already profitable. 
+                    See the ROI that made us the go-to marketplace for API monetization.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="zap" class="w-10 h-10 text-purple-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold">Faster Monetization</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">While competitors take weeks, go live in 15 minutes. You control your pricing—set it your way and monetize instantly.</p>
+                    <div class="bg-white rounded-lg p-3 text-sm">
+                        <div class="font-medium text-purple-600">ROI: 300x faster time-to-revenue</div>
+                        <div class="text-gray-600">vs building your own billing system</div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="key" class="w-10 h-10 text-green-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold">One Key, Many APIs</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Consumers get a single key for all purchases. 73% higher retention vs individual API subscriptions.</p>
+                    <div class="bg-white rounded-lg p-3 text-sm">
+                        <div class="font-medium text-green-600">Result: 5x more API consumption</div>
+                        <div class="text-gray-600">per customer vs traditional methods</div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="credit-card" class="w-10 h-10 text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold">Stripe Connect Payouts</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Revenue flows directly to your Stripe daily—no 30-day holds. 135 currencies supported.</p>
+                    <div class="bg-white rounded-lg p-3 text-sm">
+                        <div class="font-medium text-blue-600">Benefit: Daily cash flow</div>
+                        <div class="text-gray-600">vs monthly invoicing delays</div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="bar-chart-2" class="w-10 h-10 text-orange-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold">Built-in Analytics</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Real-time tracking of calls, revenue, latency, errors. AI-powered pricing optimization suggestions.</p>
+                    <div class="bg-white rounded-lg p-3 text-sm">
+                        <div class="font-medium text-orange-600">Advantage: 40% revenue increase</div>
+                        <div class="text-gray-600">from AI pricing recommendations</div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="shield" class="w-10 h-10 text-red-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold">Enterprise-Grade Security</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Rate-limiting, authentication, logs, DDoS protection, and compliance certifications included.</p>
+                    <div class="bg-white rounded-lg p-3 text-sm">
+                        <div class="font-medium text-red-600">Security: SOC 2, GDPR, HIPAA ready</div>
+                        <div class="text-gray-600">Enterprise-ready from day one</div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="users" class="w-10 h-10 text-indigo-600 mr-3"></i>
+                        <h3 class="text-xl font-semibold">Built-in Marketplace</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Instant access to 50,000+ developers actively looking for APIs. No marketing required.</p>
+                    <div class="bg-white rounded-lg p-3 text-sm">
+                        <div class="font-medium text-indigo-600">Reach: 50k active developers</div>
+                        <div class="text-gray-600">vs 0 with self-hosted solutions</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white text-center" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-4">Real Success Story</h3>
+                <p class="text-lg mb-4">"WeatherAPI went from $0 to $23,000/month in 90 days. The built-in marketplace brought us 500+ paying customers without any marketing spend."</p>
+                <p class="text-sm opacity-90">- Sarah Chen, Founder WeatherAPI Pro</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text" data-aos="fade-up">Pricing (for API Providers)</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div class="pricing-card bg-white rounded-lg shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-2">Launch</h3>
+                    <p class="text-4xl font-bold text-purple-600 mb-4">$49<span class="text-lg text-gray-600">/mo</span></p>
+                    <p class="text-sm text-gray-500 mb-4">For indie devs or side-projects testing the waters.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Revenue up to $1,000/month</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Standard analytics</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Platform fee: 10%</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Basic support (email)</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Started</button>
+                </div>
+                <div class="pricing-card bg-white rounded-lg shadow-lg p-8 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-4 py-1 rounded-full text-sm">Popular</div>
+                    <h3 class="text-2xl font-bold mb-2">Growth</h3>
+                    <p class="text-4xl font-bold text-purple-600 mb-4">$199<span class="text-lg text-gray-600">/mo</span></p>
+                    <p class="text-sm text-gray-500 mb-4">For APIs with traction looking to scale monetization.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Revenue up to $10,000/month</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Enhanced analytics</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Platform fee: 7%</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Featured APIs section</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Email + chat support</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Started</button>
+                </div>
+                <div class="pricing-card bg-white rounded-lg shadow-lg p-8" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                    <p class="text-4xl font-bold text-purple-600 mb-4">$499<span class="text-lg text-gray-600">/mo</span></p>
+                    <p class="text-sm text-gray-500 mb-4">For serious API businesses treating endpoints like products.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Revenue up to $50,000/month</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Advanced analytics</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Platform fee: 5%</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Priority listing in searches</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>24h SLA support</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Started</button>
+                </div>
+                <div class="pricing-card bg-white rounded-lg shadow-lg p-8" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-2">Scale</h3>
+                    <p class="text-4xl font-bold text-purple-600 mb-4">$999<span class="text-lg text-gray-600">/mo</span></p>
+                    <p class="text-sm text-gray-500 mb-4">For professional vendors, startups, or SaaS companies.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Revenue up to $200,000/month</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Full analytics suite</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Platform fee: 3%</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Featured placement</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Dedicated account manager</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>SLA-backed uptime</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Started</button>
+                </div>
+                <div class="pricing-card bg-white rounded-lg shadow-lg p-8 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                    <p class="text-4xl font-bold text-purple-600 mb-4">Custom</p>
+                    <p class="text-sm text-gray-500 mb-4">For API companies, regulated industries, or enterprise marketplaces.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Unlimited revenue volume</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Platform fee as low as 1%</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Dedicated infra / compliance</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>24/7 support, custom SLA</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Creator Success Stories</h2>
+                <p class="text-xl text-gray-600">Real developers, real revenue, real impact</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/100x100/1" alt="Alex Kim" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold">Alex Kim</h4>
+                            <p class="text-sm text-gray-600">Image Processing API</p>
+                        </div>
+                    </div>
+                    <div class="text-2xl font-bold text-green-600 mb-2">$47,000/month</div>
+                    <p class="text-gray-700 text-sm">"Listed my API on Monday, had my first $1,000 week by Friday. The marketplace exposure is incredible."</p>
+                    <div class="mt-4 flex items-center text-xs text-gray-500">
+                        <i data-feather="trending-up" class="w-4 h-4 mr-1"></i>
+                        340% growth in 3 months
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/100x100/2" alt="Maria Garcia" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold">Maria Garcia</h4>
+                            <p class="text-sm text-gray-600">Translation API</p>
+                        </div>
+                    </div>
+                    <div class="text-2xl font-bold text-green-600 mb-2">$23,500/month</div>
+                    <p class="text-gray-700 text-sm">"Replaced my entire SaaS billing infrastructure. Now I focus on building features, not chasing payments."</p>
+                    <div class="mt-4 flex items-center text-xs text-gray-500">
+                        <i data-feather="clock" class="w-4 h-4 mr-1"></i>
+                        2 weeks to profitability
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/100x100/3" alt="James Wilson" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold">James Wilson</h4>
+                            <p class="text-sm text-gray-600">Financial Data API</p>
+                        </div>
+                    </div>
+                    <div class="text-2xl font-bold text-green-600 mb-2">$89,000/month</div>
+                    <p class="text-gray-700 text-sm">"Enterprise customers found me through the marketplace. Closed 6-figure deals without sales calls."</p>
+                    <div class="mt-4 flex items-center text-xs text-gray-500">
+                        <i data-feather="award" class="w-4 h-4 mr-1"></i>
+                        Enterprise plan user
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="mb-8 inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2" data-aos="fade-up">
+                <i data-feather="zap" class="w-5 h-5 mr-2"></i>
+                <span class="text-sm font-medium">Limited time: First month free + 0% platform fee for 30 days</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Your API Could Be Next.</h2>
+            <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                While you're reading this, developers are searching for APIs like yours. 
+                Join the 5,000+ creators who replaced months of development with 15 minutes of setup. 
+                The next success story could be yours—but only if you list today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8" data-aos="fade-up" data-aos-delay="400">
+                <button class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 shadow-lg">
+                    Start Earning Today →
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all transform hover:scale-105">
+                    Calculate Your Potential
+                </button>
+            </div>
+            <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center" data-aos="fade-up" data-aos-delay="600">
+                <div>
+                    <div class="text-2xl font-bold drop-shadow-lg">89%</div>
+                    <div class="text-sm opacity-90 font-medium drop-shadow">Success rate</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold drop-shadow-lg">48hrs</div>
+                    <div class="text-sm opacity-90 font-medium drop-shadow">Avg. to first $</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold drop-shadow-lg">$2.3M+</div>
+                    <div class="text-sm opacity-90 font-medium drop-shadow">Paid this month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Endpoint Market™</h3>
+                    <p class="text-gray-400">The Stripe-powered marketplace for APIs.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Endpoint Market™. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>AOS.init();</script>
+    <script>feather.replace();</script>
+</body>
+</html>
